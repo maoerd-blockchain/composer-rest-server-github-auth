@@ -23,7 +23,7 @@ RUN deluser --remove-home node && \
     su -c "npm install --production -g pm2 base64-js ieee754 composer-rest-server@${VERSION} loopback-connector-mongodb passport-github" - composer && \
     su -c "npm cache clean --force" - composer && \
     rm -rf /home/composer/.config /home/composer/.node-gyp /home/composer/.npm && \
-apk del make gcc g++ python git
+    apk del make gcc g++ python git
 
 RUN ln -s node_modules .node_modules
 
